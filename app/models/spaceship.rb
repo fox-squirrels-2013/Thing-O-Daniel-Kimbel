@@ -1,3 +1,2 @@
-class Spaceship < ActiveRecord::Base
-  
+class Spaceship < ActiveRecord::Base  
 end

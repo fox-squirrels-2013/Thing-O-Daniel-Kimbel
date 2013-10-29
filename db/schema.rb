@@ -16,9 +16,10 @@ ActiveRecord::Schema.define(version: 20131028224506) do
   enable_extension "plpgsql"
 
   create_table "spaceships", force: true do |t|
-    t.string "name"
-    t.string "engine"
-    t.string "wings"
+    t.string  "name"
+    t.integer "engines"
+    t.integer "lasers"
+    t.integer "shields"
   end
 
 end

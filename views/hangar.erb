@@ -1,0 +1,9 @@
+<% if Spaceship.count == 0 %>
+  <p>You don't have any spaceships! Why don't you go build one?</p>
+<% else %>
+  <p>You have <%= Spaceship.count %> spaceship(s) in your hangar:</p>
+  <% Spaceship.find_each do |spaceship| %>
+  <%= "ID # #{spaceship.id}: #{spaceship.name} - Lvl #{spaceship.engines} Engines, Lvl #{spaceship.lasers} Lasers, Lvl #{spaceship.shields} Shields" %><br/><br/>
+  <% end %>
+<% end %>
+
