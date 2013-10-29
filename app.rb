@@ -4,7 +4,7 @@ require_relative './app/models/spaceship'
 
 # ActiveRecord::Base.establish_connection(adapter: 'postgresql')
 
-ActiveRecord::Base.establish_connection(ENV['DATABASE_URL'] || 'postgres://localhost/spaceship_db')
+ActiveRecord::Base.establish_connection(ENV['HEROKU_POSTGRESQL_NAVY_URL'] || 'postgres://localhost/spaceship_db')
 
 get '/' do 
   erb :index
